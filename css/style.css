@@ -34,5 +34,65 @@ main {
 }
 
 .copyright {
-    font-size: 90%
+    font-size: 90%;
+}
+
+.result-banner {
+    font-size: 120%;
+}
+
+#container{			
+	width:600px;
+	margin:0 auto;
+	background:#ffffff;
+	padding:20px;
+}
+
+#header{
+	text-align:center;
+	margin:20px 0 40px;
+}
+		
+#footer{
+	text-align:center;
+	margin-top:40px;
+}
+
+#register {
+	margin-left:100px;	
+}
+#register label{
+	margin-right:5px;
+}
+#register input {
+	padding:5px 7px;
+	border:1px solid #d5d9da;
+	box-shadow: 0 0 5px #e8e9eb inset;
+	width:250px;
+	font-size:1em;
+	outline:0;
+}
+
+#result{
+	margin-left:10px;
+}
+
+.r0{
+	color:#ef5350;
+}
+
+.r1{
+	color:#ffa726;
+}
+
+.r2{
+	color:#ffee58;
+}
+
+.r3{
+	color:#d4e157;
+}
+
+.r4{
+	color:#66bb6a;
 }
