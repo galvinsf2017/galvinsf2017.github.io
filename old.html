@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>| 投我一票！ |</title>
+  <title>| 密码复杂度检查器 |</title>
 
   <!-- CSS  -->
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -13,14 +13,14 @@
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><span id="logo-container" class="brand-logo">你的密码 是“密”码吗</span>
       <ul class="right hide-on-med-and-down">
-        <li><a href="index.html">检测密码复杂度 (首页)</a></li>
-        <li class="active"><a href="vote.html">投我一票！</a></li>
+        <li class="active"><a href="/">检测密码复杂度 (首页)</a></li>
+        <li><a href="vote.html">投我一票！</a></li>
         <li><a href="#STILL-NEED-TO-BUILD-AND-ASK"><i class="material-icons left">insert_comment</i>在留言板上给我留言吧</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="index.html">检测密码复杂度 (首页)</a></li>
-        <li class="active"><a href="vote.html">投我一票！</a></li>
+        <li class="active"><a href="/">检测密码复杂度 (首页)</a></li>
+        <li><a href="vote.html">投我一票！</a></li>
         <li><a class="waves-effect waves-light btn" href="#STILL-NEED-TO-BUILD-AND-ASK"><i class="material-icons left">insert_comment</i>在留言板上给我留言吧</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -36,18 +36,32 @@
 
     </div>
   </div>
-  <div class="row">
-     <div class="col s1 m4 l4"></div>
-     <div class="col s10 m4 l4">
-       <div class="card-panel deep-orange lighten-2">
+    <div class="row">
+        <div class="col s2 m3 l4"></div>
+        <form>
+          <div class="row">
+            <div class="input-field col s8 m6 l4">
+              <i class="material-icons prefix">lock</i>
+              <input name="password" id="password" type="password" class="validate" />
+              <label for="icon_prefix password">快来测试一下！（请输入密码）</label>
+            </div>
+          </div>
+        </form>
+        <div class="col s2 m3 l4"></div>
+      </div>
+   <div class="row">
+     <div class="col s1 m4 l5"></div>
+     <div class="col s10 m4 l2">
+       <div class="card-panel amber">
          <span class="white-text">
-          <span id="votequote"></span>
+            <span class="result-banner">检测结果：</span>
+            <br><br>
+            <span id="result"></span>
          </span>
        </div>
      </div>
-     <div class="col s1 m4 l4"></div>
+     <div class="col s1 m4 l5"></div>
    </div>
-    
 
 <!--
     
@@ -101,7 +115,9 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">高逸扬 Galvin.G</h5>
-          <p class="grey-text text-lighten-4">在编程方面小有成就，希望大家多多指教~<br>谢谢您宝贵的一票哦！<br>我的号码是：<span class="red-text text-lighten-1 number">3</span></p>
+          <p class="grey-text text-lighten-4">在编程方面小有成就，希望大家多多指教~<br>哦对，记得投我一票哦！<br>我的号码是：<span class="red-text text-lighten-1 number">3</span></p>
+
+
         </div>
       </div>
     </div>
@@ -120,6 +136,7 @@
   <link href="https://fonts.proxy.ustclug.org/icon?family=Material+Icons" rel="stylesheet">
   <link href="http://cdn.bootcss.com/materialize/0.97.7/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     		
+  <script src="script.js"></script>	
   <script src="js/random-quote.js"></script>
 
   </body>

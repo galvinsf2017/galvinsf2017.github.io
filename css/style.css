@@ -38,7 +38,7 @@ main {
 }
 
 .result-banner {
-    font-size: 120%;
+    font-size: 140%;
 }
 
 #container{			
@@ -77,22 +77,11 @@ main {
 	margin-left:10px;
 }
 
-.r0{
-	color:#ef5350;
+.hsimp-checks h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.1em;
 }
 
-.r1{
-	color:#ffa726;
-}
-
-.r2{
-	color:#ffee58;
-}
-
-.r3{
-	color:#d4e157;
-}
-
-.r4{
-	color:#66bb6a;
+#password-time {
+    font-size: 1.2em;
 }
