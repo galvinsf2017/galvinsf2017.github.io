@@ -74,60 +74,56 @@ function(e) {
 		3: [function(e, a) {
 			a.exports = {
 				common: {
-					name: "Common Password: In the top {{ value }} most used passwords",
-					message: "Your password is very commonly used. It would be cracked almost instantly."
+					name: "- 密码过于通俗：您的密码是最常用的密码中的第 {{ value }} 个！",
+					message: "  您的密码过于通俗，在电光火石间就会被破解！"
 				},
 				xkcd: {
 					name: "xkcd",
 					message: "I suspect the password crackers might be on to this one by now..."
 				},
-				jeff: {
-					name: "There's always a back door...",
-					message: '"The guy who made the software was called Jeff Jeffty Jeff. Born on the first of Jeff, nineteen-jeffty-jeff."'
-				},
 				lengthVeryShort: {
-					name: "Length: Very short",
-					message: "Your password is very short. The longer a password is the more secure it will be."
+					name: "- 密码长度：太短了",
+					message: "  您的密码太短了，一个长一些的密码将会更加安全"
 				},
 				possiblyWord: {
-					name: "Possibly a word",
-					message: "Your password looks like it could be a dictionary word or a name. If it's a name with personal significance it might be easy to guess. If it's a dictionary word it could be cracked very quickly."
+					name: "- 可能是一个单词...",
+					message: "  您的密码看起来好像是一个单词，这将造成您的密码非常容易被破解；并且，将个人信息包含在密码中会使您的密码非常容易被破解"
 				},
 				onlyNumbers: {
-					name: "Character Variety: Just Numbers",
-					message: "Your password only contains numbers. This reduces the number of possible combinations dramatically."
+					name: "- 密码内容多样化：只有数字的密码",
+					message: "  您的密码只包含数字，这将造成您的密码被非常轻易地穷举出来"
 				},
 				wordAndNumber: {
-					name: "Possibly a Word and a Number",
-					message: "Your password looks like it might just be a word and a few digits. This is a very common pattern and would be cracked very quickly."
+					name: "- 密码内容多样化：只有简单组合",
+					message: "  您的密码看起来只有一些单词和数字，这将造成您的密码非常容易被破解"
 				},
 				lengthShort: {
-					name: "Length: Short",
-					message: "Your password is quite short. The longer a password is the more secure it will be."
+					name: "- 密码长度：较短",
+					message: "  您的密码较短，一个长密码将会更加安全"
 				},
 				justLetters: {
-					name: "Character Variety: Just Letters",
-					message: "Your password only contains letters. Adding numbers and symbols can make your password more secure."
+					name: "- 密码内容多样化：只有字母",
+					message: "  您的密码只包含字母，在其中添加数字与特殊符号将使您的密码更加安全"
 				},
 				noSymbols: {
-					name: "Character Variety: No Symbols",
-					message: "Your password only contains numbers and letters. Adding a symbol can make your password more secure. Don't forget you can often use spaces in passwords."
+					name: "- 密码内容多样化：缺少特殊符号",
+					message: "  您的密码只包含数字与字母，在其中添加特殊符号将使您的密码更加安全"
 				},
 				telephone: {
-					name: "Possibly a Telephone Number / Date",
-					message: "Your password looks like it might be a telephone number or a date. If it is and it has personal significance then it might be very easy for someone to guess."
+					name: "- 可能包含个人信息",
+					message: "  您的密码看起来好像包含个人信息，将个人信息包含在密码中会使您的密码不安全"
 				},
 				repeatedPattern: {
-					name: "Repeated Pattern",
-					message: "Repeated characters or patterns can make your password more predictable."
+					name: "- 重复字符",
+					message: "  重复的字符将使您的密码更容易被破解"
 				},
 				nonStandardCharacters: {
-					name: "Character Variety: Non-Standard Characters",
-					message: "Your password contains a non-keyboard character. This should make it more secure."
+					name: "- 密码内容多样化：非常规字符",
+					message: "  您的密码包含非常规字符。这将使您的密码更加安全"
 				},
 				lengthLong: {
-					name: "Length: Long",
-					message: "Your password is over sixteen characters long."
+					name: "- 密码长度：长",
+					message: "  您的密码长度超过了 16 位，这意味着您的密码比较安全"
 				}
 			}
 		}, {}],
@@ -252,10 +248,6 @@ function(e) {
 				"^correcthorsebatterystaple$": {
 					level: "insecure",
 					id: "xkcd"
-				},
-				"^jeff|geoff$": {
-					level: "easteregg",
-					id: "jeff"
 				},
 				"^.{1,6}$": {
 					level: "warning",
@@ -460,13 +452,13 @@ function(e) {
 							u = "1" === m ? c.getSingular() : c.getPlural(),
 							h = m + " " + u
 					} catch (g) {
-						var h = "Forever"
+						var h = "永远"
 					}
 					var p = o.checker(e),
 						b = p.getChecks();
 					a.getChecks = r.output(b);
 					var y = "bad";
-					return p.isInsecure() ? (y = "insecure", l = 0, h = "Instantly") : l >= i.good ? y = p.hasWarnings() ? "ok" : "good" : l >= i.ok && (y = "ok"), a.getSecurityLevel = r.output(y), a.getPossibleCombinations = r.output(t), a.getTimeInSeconds = r.output(l), a.getString = r.output(h), a.getTimeString = r.output(h), a
+					return p.isInsecure() ? (y = "insecure", l = 0, h = "一瞬间") : l >= i.good ? y = p.hasWarnings() ? "ok" : "good" : l >= i.ok && (y = "ok"), a.getSecurityLevel = r.output(y), a.getPossibleCombinations = r.output(t), a.getTimeInSeconds = r.output(l), a.getString = r.output(h), a.getTimeString = r.output(h), a
 				};
 			s.setPeriodDictionary = o.period.setDictionary, s.setNamedNumberDictionary = o.namedNumber.setDictionary, s.setCheckerDictionary = o.checker.setDictionary, s.setCharacterSets = o.characterSets.setCharacterSets, s.setCheckerChecks = o.checker.setChecks, s.setOptions = function(e) {
 				i = r.defaults(n, e)
@@ -480,78 +472,78 @@ function(e) {
 		}],
 		13: [function(e, a) {
 			a.exports = {
-				hundred: 2,
-				thousand: 3,
-				million: 6,
-				billion: 9,
-				trillion: 12,
-				quadrillion: 15,
-				quintillion: 18,
-				sextillion: 21,
-				septillion: 24,
-				octillion: 27,
-				nonillion: 30,
-				decillion: 33,
-				undecillion: 36,
-				duodecillion: 39,
-				tredecillion: 42,
-				quattuordecillion: 45,
-				quindecillion: 48,
-				sexdecillion: 51,
-				septendecillion: 54,
-				octodecillion: 57,
-				novemdecillion: 60,
-				vigintillion: 63,
-				unvigintillion: 66,
-				duovigintillion: 69,
-				tresvigintillion: 72,
-				quattuorvigintillion: 75,
-				quinquavigintillion: 78,
-				sesvigintillion: 81,
-				septemvigintillion: 84,
-				octovigintillion: 87,
-				novemvigintillion: 90,
-				trigintillion: 93,
-				untrigintillion: 96,
-				duotrigintillion: 99,
-				googol: 100,
-				trestrigintillion: 102,
-				quattuortrigintillion: 105,
-				quinquatrigintillion: 108,
-				sestrigintillion: 111,
-				septentrigintillion: 114,
-				octotrigintillion: 117,
-				noventrigintillion: 120,
-				quadragintillion: 123,
-				quinquagintillion: 153,
-				sexagintillion: 183,
-				septuagintillion: 213,
-				octogintillion: 243,
-				nonagintillion: 273,
-				centillion: 303,
-				uncentillion: 306,
-				duocentillion: 309,
-				trescentillion: 312,
-				decicentillion: 333,
-				undecicentillion: 336,
-				viginticentillion: 363,
-				unviginticentillion: 366,
-				trigintacentillion: 393,
-				quadragintacentillion: 423,
-				quinquagintacentillion: 453,
-				sexagintacentillion: 483,
-				septuagintacentillion: 513,
-				octogintacentillion: 543,
-				nonagintacentillion: 573,
-				ducentillion: 603,
-				trecentillion: 903,
-				quadringentillion: 1203,
-				quingentillion: 1503,
-				sescentillion: 1803,
-				septingentillion: 2103,
-				octingentillion: 2403,
-				nongentillion: 2703,
-				millinillion: 3003
+				百: 2,
+				千: 3,
+				百万: 6,
+				十亿: 9,
+				兆: 12,
+				"× 10<sup>15</sup>": 15,
+				"× 10<sup>18</sup>": 18,
+				"× 10<sup>21</sup>": 21,
+				"× 10<sup>24</sup>": 24,
+				"× 10<sup>27</sup>": 27,
+				"× 10<sup>30</sup>": 30,
+				"× 10<sup>33</sup>": 33,
+				"× 10<sup>36</sup>": 36,
+				"× 10<sup>39</sup>": 39,
+				"× 10<sup>42</sup>": 42,
+				"× 10<sup>45</sup>": 45,
+				"× 10<sup>48</sup>": 48,
+				"× 10<sup>51</sup>": 51,
+				"× 10<sup>54</sup>": 54,
+				"× 10<sup>57</sup>": 57,
+				"× 10<sup>60</sup>": 60,
+				"× 10<sup>63</sup>": 63,
+				"× 10<sup>66</sup>": 66,
+				"× 10<sup>69</sup>": 69,
+				"× 10<sup>72</sup>": 72,
+				"× 10<sup>75</sup>": 75,
+				"× 10<sup>78</sup>": 78,
+				"× 10<sup>81</sup>": 81,
+				"× 10<sup>84</sup>": 84,
+				"× 10<sup>87</sup>": 87,
+				"× 10<sup>90</sup>": 90,
+				"× 10<sup>93</sup>": 93,
+				"× 10<sup>96</sup>": 96,
+				"× 10<sup>99</sup>": 99,
+				"× 10<sup>100</sup>": 100,
+				"× 10<sup>102</sup>": 102,
+				"× 10<sup>105</sup>": 105,
+				"× 10<sup>108</sup>": 108,
+				"× 10<sup>111</sup>": 111,
+				"× 10<sup>114</sup>": 114,
+				"× 10<sup>117</sup>": 117,
+				"× 10<sup>120</sup>": 120,
+				"× 10<sup>123</sup>": 123,
+				"× 10<sup>153</sup>": 153,
+				"× 10<sup>183</sup>": 183,
+				"× 10<sup>213</sup>": 213,
+				"× 10<sup>243</sup>": 243,
+				"× 10<sup>273</sup>": 273,
+				"× 10<sup>303</sup>": 303,
+				"× 10<sup>306</sup>": 306,
+				"× 10<sup>309</sup>": 309,
+				"× 10<sup>312</sup>": 312,
+				"× 10<sup>333</sup>": 333,
+				"× 10<sup>336</sup>": 336,
+				"× 10<sup>363</sup>": 363,
+				"× 10<sup>366</sup>": 366,
+				"× 10<sup>393</sup>": 393,
+				"× 10<sup>423</sup>": 423,
+				"× 10<sup>453</sup>": 453,
+				"× 10<sup>483</sup>": 483,
+				"× 10<sup>513</sup>": 513,
+				"× 10<sup>543</sup>": 543,
+				"× 10<sup>573</sup>": 573,
+				"× 10<sup>603</sup>": 603,
+				"× 10<sup>903</sup>": 903,
+				"× 10<sup>1203</sup>": 1203,
+				"× 10<sup>1503</sup>": 1503,
+				"× 10<sup>1803</sup>": 1803,
+				"× 10<sup>2103</sup>": 2103,
+				"× 10<sup>2403</sup>": 2403,
+				"× 10<sup>2703</sup>": 2703,
+				"× 10<sup>3003</sup>": 3003
 			}
 		}, {}],
 		14: [function(e, a) {
@@ -635,67 +627,67 @@ function(e) {
 		15: [function(e, a) {
 			a.exports = [{
 				singular: "yoctosecond",
-				plural: "yoctoseconds",
+				plural: "遥刻托秒",
 				seconds: 1e-24
 			}, {
 				singular: "zeptosecond",
-				plural: "zeptoseconds",
+				plural: "仄普托秒",
 				seconds: 1e-21
 			}, {
 				singular: "attosecond",
-				plural: "attoseconds",
+				plural: "阿托秒",
 				seconds: 1e-18
 			}, {
 				singular: "femtosecond",
-				plural: "femtoseconds",
+				plural: "飞秒",
 				seconds: 1e-15
 			}, {
 				singular: "picosecond",
-				plural: "picoseconds",
+				plural: "皮秒",
 				seconds: 1e-12
 			}, {
 				singular: "nanosecond",
-				plural: "nanoseconds",
+				plural: "纳秒",
 				seconds: 1e-9
 			}, {
 				singular: "microsecond",
-				plural: "microseconds",
+				plural: "毫秒",
 				seconds: 1e-6
 			}, {
 				singular: "millisecond",
-				plural: "milliseconds",
+				plural: "毫秒",
 				abbreviations: ["ms", "msec"],
 				seconds: .001
 			}, {
 				singular: "second",
-				plural: "seconds",
+				plural: "秒",
 				abbreviations: ["s", "sec", "secs"],
 				seconds: 1
 			}, {
 				singular: "minute",
-				plural: "minutes",
+				plural: "分钟",
 				abbreviations: ["m", "min", "mins"],
 				seconds: 60
 			}, {
 				singular: "hour",
-				plural: "hours",
+				plural: "小时",
 				abbreviations: ["h"],
 				seconds: 3600
 			}, {
 				singular: "day",
-				plural: "days",
+				plural: "天",
 				seconds: 86400
 			}, {
 				singular: "week",
-				plural: "weeks",
+				plural: "星期",
 				seconds: 604800
 			}, {
 				singular: "month",
-				plural: "months",
+				plural: "月",
 				seconds: 2626560
 			}, {
 				singular: "year",
-				plural: "years",
+				plural: "年",
 				seconds: 31557600
 			}]
 		}, {}],
