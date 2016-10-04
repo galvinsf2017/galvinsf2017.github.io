@@ -11,21 +11,9 @@
   <link href="http://cdn.bootcss.com/materialize/0.97.7/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <!-- <meta http-equiv="refresh" content="3; url=index.html"/> -->
     
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N2C6BH');</script>
-<!-- End Google Tag Manager -->
     
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2C6BH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><span id="logo-container" class="brand-logo">你的密码 是“密”码吗</span>
       <ul class="right hide-on-med-and-down">
@@ -155,9 +143,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="http://cdn.bootcss.com/materialize/0.97.7/js/materialize.min.js"></script>
   <script src="js/init.js"></script>
   <link href="http://fonts.proxy.ustclug.org/icon?family=Material+Icons" rel="stylesheet">
-    		
-  <script src="js/hsimp.min.js"></script>	
+ 		
   <script src="js/random-quote.js"></script>
+  <script src="js/hsimp.min.js"></script>	
     
         <script>
             (function (doc) {
@@ -185,7 +173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 // Setup the HSIMP object
                 var attachTo = hsimp({
                     options: {
-                        calculationsPerSecond: 10e9, // 10 billion calculations per second
+                        calculationsPerSecond: 10e4, // 10 thousands calculations per second
                         good: 31557600e9, // 1 billion years
                         ok: 31557600e3 // 1 thousand years
                     },
