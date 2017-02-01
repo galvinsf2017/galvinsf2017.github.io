@@ -1,0 +1,2 @@
+document.write("<link href=\"css/style.css\" type=\"text/css\" rel=\"stylesheet\" media=\"screen,projection\"/>");
+document.write("<link href=\"//cdn.bootcss.com/materialize/0.97.7/css/materialize.min.css\" type=\"text/css\" rel=\"stylesheet\" media=\"screen,projection\"/>")
