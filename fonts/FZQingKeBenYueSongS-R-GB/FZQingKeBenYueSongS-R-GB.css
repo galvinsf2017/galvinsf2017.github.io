@@ -1,0 +1,11 @@
+        @font-face {
+            font-family: 'FZQingKeBenYueSongS-R-GB';
+            src: url('FZQingKeBenYueSongS-R-GB/FZQingKeBenYueSongS-R-GB.eot');
+            src: url('FZQingKeBenYueSongS-R-GB/FZQingKeBenYueSongS-R-GB.eot?#iefix') format('embedded-opentype'), url('FZQingKeBenYueSongS-R-GB/FZQingKeBenYueSongS-R-GB.woff') format('woff'), url('FZQingKeBenYueSongS-R-GB/FZQingKeBenYueSongS-R-GB.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        #votequote {
+            font-family: "FZQingKeBenYueSongS-R-GB", serif
+        }
