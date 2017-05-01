@@ -5,12 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
     <title>| 密码复杂度检查器 |</title>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" crossorigin="anonymous" />
     <link href="http://cdn.bootcss.com/materialize/0.97.7/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" crossorigin="anonymous" />
     <link href="http://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="http://static.qn.iblueg.cn/sf2017/fonts/FZQingKeBenYueSongS-R-GB.css" rel="stylesheet" crossorigin="anonymous">
     <style>
-        .icon-block{padding:0 15px}.icon-block .material-icons{font-size:inherit}body{display:flex;min-height:100vh;line-height:20px;flex-direction:column}main{flex:1 0 auto}.description{line-height:35px}.number{font-size:120%}.copyright{font-size:90%}.result-banner{font-size:140%}#container{margin:0 auto;padding:20px;width:600px;background:#fff}#header{margin:20px 0 40px}#footer,#header{text-align:center}#footer{margin-top:40px}#register{margin-left:75pt}#register label{margin-right:5px}#register input{padding:5px 7px;width:250px;outline:0;border:1px solid #d5d9da;box-shadow:0 0 5px #e8e9eb inset;font-size:1em}#result{margin-left:10px}.hsimp-checks h2{margin-bottom:.1em;font-size:1.2em}#password-time{font-size:1.2em}.voteforme{font-size:120%}.smallerf{font-size:75%}
+        .icon-block{padding:0 15px}.icon-block .material-icons{font-size:inherit}body{display:flex;min-height:100vh;line-height:20px;flex-direction:column;background-image:linear-gradient(120deg,#155799,#159957)}main{flex:1 0 auto}.description{line-height:35px}.number{font-size:120%}.copyright{font-size:90%}.result-banner{font-size:140%}#container{width:600px;margin:0 auto;background:#fff;padding:20px}#header{margin:20px 0 40px}#footer,#header{text-align:center}#footer{margin-top:40px}#register{margin-left:75pt}#register label{margin-right:5px}#register input{padding:5px 7px;border:1px solid #d5d9da;box-shadow:0 0 5px #e8e9eb inset;width:250px;font-size:1em;outline:0}#result{margin-left:10px}.hsimp-checks h2{font-size:1.2em;margin-bottom:.1em}#password-time{font-size:1.2em}.voteforme{font-size:120%}.smallerf{font-size:75%}.FZQingKeBenYueSongS{font-family:"FZQingKeBenYueSongS-R-GB", serif}
     </style>
 </head>
 
@@ -56,12 +55,12 @@
                 <div class="col s10 m8 l6">
                     <div class="card-panel amber">
                         <span class="white-text">
-                        <span class="result-banner">破解您的密码预计花费时间：</span>
+                        <span class="result-banner FZQingKeBenYueSongS">破解您的密码预计花费时间：</span>
                         <br>
-                        <div id="password-time" class="hsimp-time"></div>
+                        <span id="password-time" class="hsimp-time"></span>
                         <br><br><br>
-                        <span class="result-banner">检测详细信息：</span>
-                        <ul id="password-checks" class="hsimp-checks"></ul>
+                        <span class="result-banner FZQingKeBenYueSongS">检测详细信息：</span>
+                        <span id="password-checks" class="hsimp-checks"></span>
                         </span>
                     </div>
                 </div>
@@ -120,17 +119,18 @@
         })(jQuery);
 
     </script>
-    <script src="http://static.qn.iblueg.cn/sf2017/hsimp.min.js" crossorigin="anonymous"></script>
+    <!--<script src="http://static.qn.iblueg.cn/sf2017/hsimp.min.js" crossorigin="anonymous"></script>-->
+    <script src="js/hsimp.js" crossorigin="anonymous"></script>
     <script>window.onload=function(){var a=["密码，已是每人熟知的事物<br>可是，<br>每天有约 1 亿个密码被破解。<br>您的密码，真的安全吗？","密码<br>是每个人隐私的一把锁<br>可是，在 21 世纪<br>您能保证您的“锁”<br>不被“撬开”吗？","隐私就好比每个人的隐形资产<br>只有高强度的密码才能有效保护您的隐私<br>可是，每天有超过 1 亿个密码被破解<br>您的隐私，还真的是隐私吗？","截止 2015 年 1 月，<br>微信活跃用户已达到 5.5 亿<br>可您的密码，真的能保护您的隐私吗","2011 年 12 月 21 日 上午 10 点<br>国内最大开发者技术在线社区 CSDN 密码数据库被注入<br>30 万用户密码在其他网站尝试登陆成功<br>您的密码，真的安全吗？"];var b=Math.floor((Math.random()*a.length));document.getElementById("votequote").innerHTML=a[b]};</script>
 
     <footer class="page-footer orange">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
+                <div class="col l6 s12 FZQingKeBenYueSongS">
                     <h5 class="white-text">高逸扬 Galvin.G</h5>
-                    <p class="grey-text text-lighten-4">在编程方面小有成就，希望大家多多指教~<br>哦对，记得投我一票哦！<br>我的展台号码是：<span class="red-text text-lighten-1 number">NUMBER</span></p>
+                    <p class="grey-text text-lighten-4">在编程方面小有成就，希望大家多多指教~<br>哦对，记得投我一票哦！<br>我的展台号码是：<span class="red-text text-lighten-1 number">NUMBERGOESHERE</span></p>
                     <div class="card-panel orange darken-2"><span class="white-text"><span style="font-size:120%">版权声明</span><br><br>
-                        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="http://static.qn.iblueg.cn/sf2017/cc-by.png" width="20%"></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">&nbsp;&nbsp;&nbsp;| 密码复杂度检测器 |</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="http://galvingao.xyz/" property="cc:attributionName" rel="cc:attributionURL" class="light-blue-text text-lighten-4">Galvin.G</a> 基于 <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/howsecureismypassword/hsimp" rel="dct:source" class="light-blue-text text-lighten-4">howsecureismypassword</a> 与 <a xmlns:dct="http://purl.org/dc/terms/" href="http://materializecss.com" rel="dct:source" class="light-blue-text text-lighten-4">Materialize</a> 制作，并采用 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" class="light-blue-text text-lighten-4">知识共享 署名 4.0 国际许可协议</a> 进行许可。</span>
+                        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="http://static.qn.iblueg.cn/sf2017/cc-by.png" width="20%"></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">&nbsp;&nbsp;&nbsp;| 密码复杂度检测器 |</span> 由 <a xmlns:cc="http://creativecommons.org/ns#" href="http://github.com/GalvinGao" property="cc:attributionName" rel="cc:attributionURL" class="light-blue-text text-lighten-4">Galvin.G</a> 基于 <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/howsecureismypassword/hsimp" rel="dct:source" class="light-blue-text text-lighten-4">howsecureismypassword</a> 与 <a xmlns:dct="http://purl.org/dc/terms/" href="http://materializecss.com" rel="dct:source" class="light-blue-text text-lighten-4">Materialize</a> 制作，并采用 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" class="light-blue-text text-lighten-4">知识共享 署名 4.0 国际许可协议</a> 进行许可。</span>
                     </div>
                 </div>
             </div>
