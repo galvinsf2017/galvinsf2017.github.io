@@ -1,4 +1,6 @@
 /* Custom Stylesheet */
+
+
 /**
  * Use this file to override Materialize files so you can update
  * the core Materialize files in the future
@@ -7,10 +9,11 @@
  */
 
 .icon-block {
-  padding: 0 15px;
+    padding: 0 15px;
 }
+
 .icon-block .material-icons {
-	font-size: inherit;
+    font-size: inherit;
 }
 
 body {
@@ -41,40 +44,42 @@ main {
     font-size: 140%;
 }
 
-#container{			
-	width:600px;
-	margin:0 auto;
-	background:#ffffff;
-	padding:20px;
+#container {
+    width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
 }
 
-#header{
-	text-align:center;
-	margin:20px 0 40px;
+#header {
+    text-align: center;
+    margin: 20px 0 40px;
 }
-		
-#footer{
-	text-align:center;
-	margin-top:40px;
+
+#footer {
+    text-align: center;
+    margin-top: 40px;
 }
 
 #register {
-	margin-left:100px;	
-}
-#register label{
-	margin-right:5px;
-}
-#register input {
-	padding:5px 7px;
-	border:1px solid #d5d9da;
-	box-shadow: 0 0 5px #e8e9eb inset;
-	width:250px;
-	font-size:1em;
-	outline:0;
+    margin-left: 100px;
 }
 
-#result{
-	margin-left:10px;
+#register label {
+    margin-right: 5px;
+}
+
+#register input {
+    padding: 5px 7px;
+    border: 1px solid #d5d9da;
+    box-shadow: 0 0 5px #e8e9eb inset;
+    width: 250px;
+    font-size: 1em;
+    outline: 0;
+}
+
+#result {
+    margin-left: 10px;
 }
 
 .hsimp-checks h2 {
@@ -90,6 +95,6 @@ main {
     font-size: 120%;
 }
 
-.smallerf{
+.smallerf {
     font-size: 75%;
 }
